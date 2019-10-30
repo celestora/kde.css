@@ -1,0 +1,350 @@
+hr {
+    border: .5px solid #bcbebf;
+}
+
+.kutil-uselect {
+    user-select: initial;
+}
+
+.kutil-no-margin {
+    margin: 0;
+}
+
+.kutil-window--noMarginElement, .kde-window > main > nav {
+    margin: -8px;
+    margin-bottom: unset;
+}
+
+.kutil-window--noMarginElementV, .kde-window > main > .tabs {
+    margin-left: -8px;
+    margin-right: -8px;
+}
+
+.kde-bg, .kde-window > main {
+    background-color: #eff0f1;
+}
+
+::-webkit-scrollbar, ::-webkit-scrollbar-thumb {
+    border-radius: 5px;
+}
+
+::-webkit-scrollbar {
+    width: 6px;
+}
+
+::-webkit-scrollbar-track {
+    background-color: #fff;
+    padding: 2px;
+}
+
+::-webkit-scrollbar-thumb {
+    width: 100%;
+    background-color: #3daee9;
+}
+
+.kde-btn, .kde-select, .kde-fieldset, .kde-input, .kde-window {
+    font-family: Helvetica, sans-serif;
+}
+
+.kde-btn, .kde-select, .kde-input, .kde-checkbox, .kde-radio {
+    position: relative;
+    border: 1.3px solid #adaeaf;
+    border-radius: 3px;
+    box-shadow: 0px 1.5px 1px #d6d7d8;
+    outline: none;
+}
+
+.kde-btn, .kde-select, .kde-input {
+    font-size: 13.5px;
+    padding: 7px 10px 7px 10px;
+}
+
+.kde-btn, .kde-select {
+    user-select: none;
+    background: linear-gradient(to top, #e8e9ea, #f1f2f3);
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+    transition: .1s border-color, color linear;
+}
+
+.kde-btn > img {
+    margin-top: -1px;
+    margin-right: -2px;
+    max-height: 15px;
+    vertical-align: bottom;
+}
+
+.kde-btn.inline {
+    background: transparent;
+    border-color: transparent;
+    box-shadow: none;
+}
+
+.kde-btn[disabled], .kde-select[disabled], .kde-checkbox[disabled], .kde-radio[disabled] {
+    filter: brightness(90%);
+    box-shadow: none;
+    cursor: not-allowed;
+    pointer-events: none;
+}
+
+.kde-btn.primary[disabled] {
+    filter: grayscale(60%);
+}
+
+.kde-btn:hover, .kde-select:hover, .kde-input:hover, .kde-checkbox:hover, .kde-radio:hover, .kde-slider::-webkit-slider-thumb:hover, .kde-slider::-moz-slider-thumb:hover {
+    border-color: #93cee9;
+}
+
+.kde-btn:active, .kde-select:active {
+    top: 1px;
+    border-color: #83b6ce;
+    background: linear-gradient(to top, #86bcd5, #97d3ef);
+}
+
+.kde-btn.primary {
+    background: linear-gradient(to top, #389fd5, #3fb3ef);
+    border-color: #3a9ccf;
+    color: #fff;
+    transition: .2s all linear;
+}
+
+.kde-btn.primary:hover {
+    background: linear-gradient(to top, #86bcd5, #97d3ef);
+    border-color: #84b8cf;
+    color: #000;
+}
+
+.kde-btn.inline:active {
+    top: 0px;
+    border-color: #93cee9;
+    background: #93cee9;
+}
+
+.kde-fieldset {
+    border: none;
+}
+
+.kde-fieldset > legend {
+    user-select: none;
+    margin-left: -12px;
+    font-weight: 900;
+}
+
+.kde-input {
+    height: 14px;
+}
+
+.kde-input:focus {
+    border-color: #3daee9;
+}
+
+input[type="file"].kde-input {
+    width: 0.1px;
+	height: 0.1px;
+	opacity: 0;
+	overflow: hidden;
+	position: absolute;
+	z-index: -1;
+}
+
+.kde-checkbox, .kde-radio {
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    width: 16px;
+    height: 16px;
+    background-color: #f1f2f3;
+    vertical-align: bottom;
+    cursor: pointer;
+    transition: .1s all linear;
+}
+
+.kde-radio {
+    border-radius: 50%;
+}
+
+.kde-checkbox:checked, .kde-radio:checked {
+    border-color: #93cee9;
+}
+
+.kde-checkbox[disabled]:checked, .kde-radio[disabled]:checked {
+    border-color: #9c9d9d;
+}
+
+.kde-checkbox:checked::after, .kde-radio:checked::after {
+    position: absolute;
+    top: 2px;
+    left: 2px;
+    content: " ";
+    background-color: #3daee9;
+    width: 10px;
+    height: 10px;
+}
+
+.kde-radio:checked::after {
+    border-radius: 50%;
+}
+
+.kde-checkbox[disabled]:checked::after, .kde-radio[disabled]:checked::after {
+    filter: grayscale(100%);
+}
+
+.kde-slider, .kde-progress, .kde-progress::-webkit-progress-bar {
+    background-color: #c1c2c4;
+    height: 6px;
+    border-radius: 20px;
+    outline: none;
+}
+
+/* Chrome/FF refuse to recognize selectors with different vendor prefixes */
+.kde-progress::-moz-progress-bar {
+    background-color: #c1c2c4;
+    height: 6px;
+    border-radius: 20px;
+    outline: none;
+}
+
+.kde-slider {
+    appearance: none;
+    -moz-appearance: none;
+    -webkit-appearance: none;
+}
+
+.kde-slider::-webkit-slider-thumb {
+    appearance: none;
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    width: 20px;
+    height: 20px;
+    background: linear-gradient(to top, #e8e9ea, #f1f2f3);
+    border: 1.3px solid #adaeaf;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: .1s border-color linear;
+}
+
+.kde-slider::-moz-slider-thumb {
+    width: 20px;
+    height: 20px;
+    background: linear-gradient(to top, #e8e9ea, #f1f2f3);
+    border: 1.3px solid #adaeaf;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: .1s border-color linear;
+}
+
+.kde-progress::-webkit-progress-value {
+    background-color: #3daee9;
+    border-radius: 20px;
+}
+
+.kde-progress::-moz-progress-value {
+    background-color: #3daee9;
+    border-radius: 20px;
+}
+
+.kde-img {
+        box-shadow: 0px -1px 10px hsla(0, 0%, 0%, .7);
+}
+
+.kde-window {
+    border: 1px solid #93cee9;
+    box-shadow: -3px 3px 8px hsla(0, 0%, 0%, .3);
+}
+
+.kde-window > header, .kde-window > main {
+    width: 100%;
+    user-select: none;
+    box-sizing: border-box;
+}
+
+.kde-window > header {
+    position: relative;
+    padding: 4px;
+    height: 24px;
+    background: linear-gradient(to top, #3daee9, #59c5fe);
+    color: #fff;
+    text-align: center;
+}
+
+.kde-window > header > img {
+    position: absolute;
+    top: 4px;
+    left: 4px;
+    max-width: 16px;
+}
+
+.kde-window > main {
+    height: calc(100% - 24px);
+    padding: 8px;
+}
+
+.kde-window > main > nav a.kde-menu-link {
+    text-decoration: none;
+    color: #000;
+    display: inline-block;
+    font-size: 15px;
+    height: 24px;
+    padding-top: 6px;
+    padding-left: 10px;
+    padding-right: 10px;
+    margin-right: -4px;
+    cursor: pointer;
+}
+
+.kde-window > main > nav a.kde-menu-link:hover {
+    background-color: #93cee9;
+}
+
+.tabs {
+    margin-bottom: 8px;
+}
+
+.tabs > .tab {
+    position: relative;
+    display: inline-block;
+    text-align: center;
+    border-right: 1px solid #c0c2c3;
+    width: 140px;
+    margin-bottom: 1px;
+}
+
+.tabs > .tab.active {
+    border-bottom: 2px solid #3daee9;
+}
+
+.tabs > .tab:not(.active):hover {
+    border-bottom: 2px solid #b7dcee;
+}
+
+.tabs > .tab > .close, .tabs > .tab > .aux {
+    position: absolute;
+}
+
+.tabs > .tab > .aux {
+    top: 2px;
+    font-size: .7rem;
+    left: 5px;
+}
+
+.tabs > .tab > .aux > img {
+    max-height: .7rem;
+    vertical-align: middle;
+    margin-top: -2px;
+}
+
+.tabs > .tab > .close {
+    top: 3px;
+    right: 4px;
+    width: 12px;
+    height: 12px;
+    font-size: 10px;
+    background-color: #7e7d7d;
+    color: #ebecec;
+    border-radius: 50%;
+    cursor: pointer
+}
+
+.tabs > .tab.active > .close, .tabs > .tab > .close:hover {
+    background-color: #e1969d;
+} 
