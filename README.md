@@ -1,9 +1,9 @@
-# KDE.CSS
+# KDE.CSS [![CodeFactor](https://www.codefactor.io/repository/github/hioi/kde.css/badge)](https://www.codefactor.io/repository/github/hioi/kde.css)
 Small (1.6KB gzipped) BSD3-licensed CSS Library, that aims to provide ability of looking like real KDE apps to your HTML pages. \
 Currently these things are supported:
 + Buttons (primary, secondary, inline)
 + Text and file inputs, textarea
-+ Combobox (<select>)
++ Combobox (select element)
 + Checkboxes and radio buttons
 + Slider (partial)
 + Fieldset (partial)
@@ -12,7 +12,11 @@ Currently these things are supported:
 + Tabs
 + Windows (partial and useless)
 
-TODO:
+**TODO**:
 - Refactor colors
 
 # Usage
+Download KDE.css and use it, there are no dependencies. Or, you can use it from DDG CDN:
+```html
+<link rel="stylesheet" href="https://vriska.ru/cdn/KDE.css" />
+```
