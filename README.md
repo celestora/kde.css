@@ -16,7 +16,7 @@ Currently these things are supported:
 - Refactor colors
 
 # Usage
-Download KDE.css and use it, there are no dependencies. Or, you can use it from DDG CDN:
+Download KDE.css and use it, there are no dependencies. Alternatively, you can grab it from CDN:
 ```html
-<link rel="stylesheet" href="https://vriska.ru/cdn/KDE.css" />
+<link rel="stylesheet" href="https://gitcdn.link/repo/hioi/kde.css/master/KDE.css" />
 ```
