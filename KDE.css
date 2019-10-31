@@ -92,7 +92,11 @@ hr {
     filter: grayscale(60%);
 }
 
-.kde-btn:hover, .kde-select:hover, .kde-input:hover, .kde-checkbox:hover, .kde-radio:hover, .kde-slider::-webkit-slider-thumb:hover, .kde-slider::-moz-slider-thumb:hover {
+.kde-btn:hover, .kde-select:hover, .kde-input:hover, .kde-checkbox:hover, .kde-radio:hover, .kde-slider::-webkit-slider-thumb:hover {
+    border-color: #93cee9;
+}
+
+.kde-slider::-moz-slider-thumb:hover {
     border-color: #93cee9;
 }
 
