@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>KDE.CSS</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/flexboxgrid/6.3.1/flexboxgrid.min.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.10/styles/atelier-cave-dark.min.css" />
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=PT+Sans&display=swap" />
+        <link rel="stylesheet" href="http://vriska.ru/cdn/KDE.css" />
+        <style>
+            body {
+                position: relative;
+                font-family: 'PT Sans', sans-serif !important;
+                background-color: #008080;
+                height: 93vh;
+            }
+            .tab-content > * {display: none;}
+            .input {display: grid;}
+            #footer {
+                position: fixed;
+                bottom: 0;
+                left: 0;
+                right: 0;
+                background-color: #eff0f1;
+                height: 25px;
+                padding: 2px;
+                border-top: 2px solid #b2b3b5;
+            }
+            #footer > img {
+                max-width: 25px;
+                cursor: no-drop;
+            }
+            #copyright {
+                position: absolute;
+                bottom: 8px;
+                right: 8px;
+                color: #fff;
+                z-index: -9999;
+            }
+        </style>
+    </head>
+    <body>
+        <div id="mainWindow" class="kde-window" style="width:700px;height:450px;">
+            <header>
+                <img src="https://kde.org/stuff/clipart/logo/plasma-logo-monochrome-128x128.png" />
+                KDE.CSS
+            </header>
+            <main>
+                <div class="tabs">
+                    <div class="tab active" for="readme">
+                        README.md
+                    </div>
+                    <div class="tab" for="buttons">
+                        Buttons.ui
+                    </div>
+                    <div class="tab" for="forms">
+                        Forms.ui
+                    </div>
+                    <div class="tab" for="windows">
+                        Windows.ui
+                    </div>
+                </div>
+                <div class="tab-content">
+                    <div class="content" id="readme">
+                        <h1>KDE.CSS</h1>
+                        <em>CSS Library, that aims to provide ability of looking like real KDE apps to your HTML pages.</em>
+                        <p>Currently these things are supported: </p>
+                        <ul>
+                            <li>Buttons (primary, secondary, inline)</li>
+                            <li>Text and file inputs, textarea</li>
+                            <li>Combobox (select element)</li>
+                            <li>Checkboxes and radio buttons</li>
+                            <li>Slider (partial)</li>
+                            <li>Fieldset (partial)</li>
+                            <li>Progressbar</li>
+                            <li>Images</li>
+                            <li>Tabs</li>
+                            <li>Windows (partial and useless)</li>
+                        </ul>
+                    </div>
+                    <div class="content" id="buttons">
+                        <h2>Buttons</h2>
+                        <div class="row">
+                            <div class="col-sm-6">
+                                <h3 class="kutil-no-margin">Primary button</h3>
+                                <button class="kde-btn primary">
+                                    <img src="https://img.icons8.com/ios-glyphs/30/000000/settings.png" />
+                                    Settings
+                                </button>
+                                <br/><br/>
+                                <h3 class="kutil-no-margin">Classic button</h3>
+                                <button class="kde-btn">
+                                    <img src="https://img.icons8.com/ios-glyphs/30/000000/settings.png" />
+                                    Settings
+                                </button>
+                                <br/><br/>
+                                <h3 class="kutil-no-margin">Inline button</h3>
+                                <button class="kde-btn inline">
+                                    <img src="https://img.icons8.com/ios-glyphs/30/000000/settings.png" />
+                                    Settings
+                                </button>
+                            </div>
+                            <div class="col-sm-6">
+                                <h3 class="kutil-no-margin">Disabled primary button</h3>
+                                <button class="kde-btn primary" disabled>
+                                    <img src="https://img.icons8.com/ios-glyphs/30/000000/settings.png" />
+                                    Settings
+                                </button>
+                                <br/><br/>
+                                <h3 class="kutil-no-margin">Disabled button</h3>
+                                <button class="kde-btn" disabled>
+                                    <img src="https://img.icons8.com/ios-glyphs/30/000000/settings.png" />
+                                    Settings
+                                </button>
+                                <br/><br/>
+                                <h3 class="kutil-no-margin">Disabled inline button</h3>
+                                <button class="kde-btn inline" disabled>
+                                    <img src="https://img.icons8.com/ios-glyphs/30/000000/settings.png" />
+                                    Settings
+                                </button>
+                            </div>
+                        </div>
+                        <hr/>
+                        <h2>Source</h2>
+                        <pre class="kutil-no-margin">
+                            <code class="html">&lt;button class="kde-btn"&gt;
+    &lt;img src="icon.gif" /&gt;
+    A button
+&lt;/button&gt;
+
+&lt;button class="kde-btn primary"&gt;
+    &lt;img src="icon.gif" /&gt;
+    A primary (blue) button
+&lt;/button&gt;
+
+&lt;button class="kde-btn inline"&gt;
+    &lt;img src="icon.gif" /&gt;
+    An inline button
+&lt;/button&gt;</code>
+                        </pre>
+                    </div>
+                    <div class="content" id="forms">
+                        <h2>Forms</h2>
+                        <div class="row">
+                            <div class="col-sm-6">
+                                <fieldset class="kde-fieldset">
+                                    <legend>Log In</legend>
+                                    <input class="kde-input" type="text" placeholder="Username" /><br/><br/>
+                                    <input class="kde-input" type="password" placeholder="Password" /><br/><br/>
+                                    <input class="kde-checkbox" type="checkbox" /> Remember me<br/><br/>
+                                    <input class="kde-checkbox" type="checkbox" checked disabled /> Login anonymously<br/><br/>
+                                    <input class="kde-btn" type="submit" />
+                                </fieldset>
+                            </div>
+                            <div class="col-sm-6">
+                                <fieldset class="kde-fieldset">
+                                    <legend>Select your car</legend>
+                                    <div class="input">
+                                        <label for="model">Car model: </label>
+                                        <select class="kde-select" id="model">
+                                            <option>BMW X5</option>
+                                            <option>Lada</option>
+                                            <option selected>Tesla Model S</option>
+                                        </select>
+                                    </div>
+                                    <br/>
+                                    <div class="input">
+                                        <label for="color">Color: </label>
+                                        <select class="kde-select" id="color">
+                                            <option>Red</option>
+                                            <option>Green</option>
+                                            <option selected>White</option>
+                                        </select>
+                                    </div>
+                                    <br/>
+                                    <div class="input">
+                                        <label for="insurance">Insurance plan: </label>
+                                        <div id="insurance">
+                                            <input class="kde-radio" type="radio" name="insurance" disabled /> No insurance (unavailable)<br/>
+                                            <input class="kde-radio" type="radio" name="insurance" checked /> Standard<br/>
+                                            <input class="kde-radio" type="radio" name="insurance" /> Premium<br/>
+                                            <input class="kde-radio" type="radio" name="insurance" /> Gold<br/>
+                                        </div>
+                                    </div>
+                                    <br/>
+                                    <div class="input">
+                                        <label for="insurance">Insurance plan duration: </label>
+                                        <div id="insurance">
+                                            <input class="kde-slider" type="range" max="10" value="9" />
+                                        </div>
+                                    </div>
+                                    <br/>
+                                    <input class="kde-btn" type="submit" value="Order" />
+                                </fieldset>
+                            </div>
+                            <fieldset class="kde-fieldset">
+                                <legend>Image preview</legend>
+                                <div class="row">
+                                    <div class="col-sm-6">
+                                        <img id="img-preview" class="kde-img" src="https://via.placeholder.com/100x150.gif" style="max-width: 100px;" />
+                                    </div>
+                                    <div class="col-sm-6">
+                                        <br/>
+                                        <input class="kde-input" id="img" type="file" accept="image/*" />
+                                        <label for="img" class="kde-btn primary">Upload file</label>
+                                    </div>
+                                </div>
+                            </fieldset>
+                        </div>
+                        <hr/>
+                        <button id="view-forms-src" class="kde-btn" style="float: right;">View source</button>
+                    </div>
+                    <div class="content" id="windows">
+                        <h2>Windows</h2>
+                        
+                        <div>
+                            <div id="inline-window" class="kde-window" style="width: 80%; height: 300px;">
+                                <header>
+                                    Window
+                                </header>
+                                <main>
+                                    <nav>
+                                        <a class="kde-menu-link" href="#!File">File</a>
+                                        <a class="kde-menu-link" href="#!Edit">Edit</a>
+                                        <a class="kde-menu-link" href="#!View">View</a>
+                                    </nav>
+                                    <div class="tabs">
+                                        <div class="tab active">
+                                            <span class="aux">*</span>
+                                            main.asm
+                                            <span class="close">&times;</span>
+                                        </div>
+                                        <div class="tab">
+                                            website.wxproj
+                                            <span class="close">&times;</span>
+                                        </div>
+                                        <div class="tab">
+                                            oto.ini
+                                            <span class="close">&times;</span>
+                                        </div>
+                                    </div>
+                                    <p>A window is a container, that can have header, menu, tabs and body.<br/>
+                                    Window consists of header section and main section:
+                                    <pre><code style="overflow-x: hidden;">&lt;div class="kde-window" style="width: 600px; height: 480px;"&gt;
+    &lt;header&gt;
+        Window title
+    &lt;/header&gt;
+    &lt;main&gt;
+        &lt;nav&gt;
+            &lt;a class="kde-menu-link" href="#!File"&gt;File&lt;/a&gt;
+        &lt;/nav&gt;
+        &lt;div class="tabs"&gt;
+            &lt;div class="tab active"&gt;       &lt;!-- only one tab can be active at one time --&gt;
+                &lt;span class="aux"&gt;*&lt;/span&gt; &lt;!-- located to the left of the tab --&gt;
+                main.c
+                &lt;span class="close"&gt;&times;&lt;/span&gt;
+            &lt;/div&gt;
+            &lt;div class="tab"&gt;
+                oto.ini
+                &lt;span class="close"&gt;&times;&lt;/span&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+        
+        Window content
+    &lt;/main&gt;
+&lt;/div&gt;</code></pre></p>
+                                </main>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </main>
+        </div>
+        
+        <div id="formsSourceWindow" class="kde-window" style="width:700px;height:450px;display:none;">
+            <header>
+                <img src="https://kde.org/stuff/clipart/logo/plasma-logo-monochrome-128x128.png" />
+                [Forms.ui] forms.html
+            </header>
+            <main>
+                <h2>Source</h2>
+                <pre><code></code></pre>
+                <hr/>
+                <button class="kde-btn close" style="float: right;">Close</button>
+            </main>
+        </div>
+        
+        <div id="copyright">
+            KDE and Plasma Logo are property of KDE Project.<br/>
+            Additional icons are provided by Icons8.
+        </div>
+        
+        <div id="footer">
+            <img src="https://kde.org/stuff/clipart/logo/plasma-logo-colorful-128x128.png" />
+        </div>
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.10/highlight.min.js"></script>
+        <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+        <script src="https://code.jquery.com/ui/1.12.0-rc.2/jquery-ui.min.js"></script>
+        <script>
+            $(".tabs").each(function() {
+                let tabs = $(this);
+                let cont = $(".tab-content", tabs.parent());
+                
+                $("#" + $(".tab.active", tabs).attr("for"), cont).show(); //Show active tab
+                
+                $(".tab", tabs).click(function() {
+                    let tab = $(this);
+                    if(tab.hasClass("active")) return false;
+                    
+                    $(".tab", tabs).removeClass("active");
+                    tab.addClass("active");
+                    
+                    $(".content", cont).hide();
+                    $("#" + $(".tab.active", tabs).attr("for"), cont).show();
+                });
+            });
+        </script>
+        <script>
+            $("#mainWindow, #formsSourceWindow").draggable({
+                containment: "parent",
+                handle: "header"
+            });
+            
+            $("#img").change(function() {
+                $("#img-preview").attr("src", URL.createObjectURL(this.files[0]));
+            });
+            
+            $("#view-forms-src").click(_ => {
+                $("#formsSourceWindow code").html($("#forms").html().replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(new RegExp("^" + " ".repeat(24), "gmu"), ""));
+                $("#formsSourceWindow").show();
+                
+                hljs.highlightBlock($("#formsSourceWindow code").get(0));
+            });
+            
+            $("#formsSourceWindow .close").click(_ => {
+                $("#formsSourceWindow").hide();
+            });
+            
+            hljs.initHighlightingOnLoad();
+        </script>
+    </body>
+</html>
